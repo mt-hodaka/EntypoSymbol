@@ -7,19 +7,13 @@
 
 import UIKit
 
-public class EntypoFont {
+open class EntypoFont {
     
-    public class func fontOfSize(fontSize: CGFloat) -> UIFont {
-        
-        struct Static {
-            static var onceToken : dispatch_once_t = 0
-        }
+    open class func fontOfSize(_ fontSize: CGFloat) -> UIFont {
         
         let name = "entypo"
-        if (UIFont.fontNamesForFamilyName(name).count == 0) {
-            dispatch_once(&Static.onceToken) {
-                FontLoader.loadFont(name)
-            }
+        if (UIFont.fontNames(forFamilyName: name).count == 0) {
+            FontLoader.loadFont(name)
         }
         
         return UIFont(name: name, size: fontSize)!
