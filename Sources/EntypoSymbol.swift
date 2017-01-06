@@ -9,10 +9,10 @@ import UIKit
 
 open class EntypoSymbol {
     
-    var text: String = ""
+    var text:String = ""
     var mutableTextFontAttributes = [String : AnyObject]()
     
-    public init(text: String, size: CGFloat) {
+    public init(text:String, size:CGFloat) {
         self.text = text
         
         self.mutableTextFontAttributes = [String : AnyObject]()
@@ -21,8 +21,8 @@ open class EntypoSymbol {
         self.mutableTextFontAttributes[NSFontAttributeName] = EntypoFont.fontOfSize(size)
     }
     
-    open func addAttribute(_ attributeName:NSObject, value:AnyObject) {
-        self.mutableTextFontAttributes[attributeName as! String] = value
+    open func addAttribute(_ attributeName:String, value:AnyObject) {
+        self.mutableTextFontAttributes[attributeName] = value
     }
     
     open func imageWithSize(_ size:CGSize)->UIImage {
