@@ -22,7 +22,7 @@ class SampleTests: XCTestCase {
     
     func testImage() {
         
-        let symbol:EntypoSymbol = EntypoSymbol(text:EntypoIcon.install as NSString, size:25)
+        let symbol:EntypoSymbol = EntypoSymbol(text:EntypoIcon.install, size:25)
         symbol.addAttribute(NSForegroundColorAttributeName as NSObject, value: UIColor.red)
         let iconImage:UIImage = symbol.imageWithSize(CGSize(width: 25, height: 25))
                 

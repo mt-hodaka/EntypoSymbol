@@ -9,10 +9,10 @@ import UIKit
 
 open class EntypoSymbol {
     
-    var text:NSString = ""
+    var text: String = ""
     var mutableTextFontAttributes = [String : AnyObject]()
     
-    public init(text:NSString, size:CGFloat) {
+    public init(text: String, size: CGFloat) {
         self.text = text
         
         self.mutableTextFontAttributes = [String : AnyObject]()

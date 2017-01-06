@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let symbol:EntypoSymbol = EntypoSymbol(text:EntypoIcon.install as NSString, size:25)
+        let symbol:EntypoSymbol = EntypoSymbol(text:EntypoIcon.install, size:25)
         let iconImage:UIImage = symbol.imageWithSize(CGSize(width: 25, height: 25))
         self.sampleImageView.image = iconImage
         
